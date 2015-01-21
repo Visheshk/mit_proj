@@ -1,0 +1,539 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"href"
+			],
+			[
+				"object",
+				"object"
+			],
+			[
+				"S3",
+				"S3_COMMAND"
+			],
+			[
+				"AW",
+				"AWSCOMMANDPATH"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pand",
+				"Pandoc"
+			],
+			[
+				"syn mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"syn mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pandoc",
+				"Pandoc"
+			],
+			[
+				"syn markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pando",
+				"Pandoc"
+			],
+			[
+				"synta mard",
+				"Set Syntax: Markdown"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"mardowned",
+				"MarkdownEditing: Add Missing Link Labels"
+			],
+			[
+				"mardownedi",
+				"MarkdownEditing: Add Missing Link Labels"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown ed",
+				"Preferences: MarkdownEditing Settings – Default"
+			],
+			[
+				"previw",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mardown",
+				"Set Syntax: Markdown"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"marke",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"haskell",
+				"SublimeHaskell: Reinspect all"
+			],
+			[
+				"haskell:show",
+				"SublimeHaskell: Show type"
+			],
+			[
+				"has",
+				"Set Syntax: Haskell"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"upgra",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"autog",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"packak",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Channel"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"pacla",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"package:sear",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pakca",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pakc",
+				"Package Control: Install Package"
+			],
+			[
+				"haske",
+				"Set Syntax: Haskell"
+			],
+			[
+				"prett",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"pret",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"form",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"rett",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"todo",
+				"Set Syntax: mdTodo"
+			],
+			[
+				"markd",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"markdow",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Discover Packages"
+			],
+			[
+				"insall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 282.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/139137_local/Developer/src/projects/mit_proj/server.js",
+		"/Users/139137_local/Developer/src/projects/mit_proj/webgl.html",
+		"/Users/139137_local/Developer/src/projects/mit_proj/style.css",
+		"/Users/139137_local/Developer/src/projects/mit_proj",
+		"/Users/139137_local/Google Drive/Blogs/mit_ws_01.md",
+		"/Users/139137_local/Google Drive/Blogs/mit_ws_02.md",
+		"/Users/139137_local/Google Drive/Blogs/mit_ws_03.md",
+		"/Users/139137_local/Downloads/p5/empty-example/index.html",
+		"/Users/139137_local/Downloads/p5/empty-example/sketch.js",
+		"/Users/139137_local/Downloads/coreos-stable-hvm_custom.template",
+		"/Users/139137_local/Developer/src/projects/coreos-docker-ci/#cloud-config",
+		"/Users/139137_local/Developer/src/projects/coreos-docker-ci/docker-registry",
+		"/Users/139137_local/Developer/src/projects/coreos-docker-ci/[Unit]",
+		"/Users/139137_local/Google Drive/Blogs/no_markdown.md",
+		"/Users/139137_local/Google Drive/Blogs/mit_ws.md",
+		"/Users/139137_local/Library/Application Support/Sublime Text 3/Packages/SublimeHaskell/Settings/SublimeHaskell.sublime-settings",
+		"/Users/139137_local/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/139137_local/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/139137_local/Library/Application Support/Sublime Text 3/Packages/AutoSpell/AutoSpell.sublime-settings",
+		"/Users/139137_local/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/139137_local/Developer/scripts/lucas-carmichael-num.hs",
+		"/Users/139137_local/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/139137_local/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/139137_local/Downloads/lab2.hs",
+		"/Users/139137_local/Desktop/hampi_expense.csv",
+		"/Users/139137_local/Developer/src/projects/fpinscala/answerkey/laziness/07.answer.scala",
+		"/Users/139137_local/Developer/src/projects/fpinscala/answerkey/datastructures/15.answer.scala",
+		"/Users/139137_local/Developer/src/projects/fpinscala/target/resolution-cache/reports/fpinscala-fpinscala_2.10-test.xml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/.idea/modules/fpinscala.iml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/.idea/modules/exercises.iml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/exercises/target/resolution-cache/reports/exercises-exercises_2.10-compile.xml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/.idea/encodings.xml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/.idea/modules/answers.iml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/answers/target/resolution-cache/reports/answers-answers_2.10-compile-internal.xml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/.idea/modules/chapter-code.iml",
+		"/Users/139137_local/Developer/src/projects/fpinscala/.idea/compiler.xml",
+		"/Users/139137_local/Downloads/kavya_public_key",
+		"/Users/139137_local/Desktop/jmeter_out",
+		"/Users/139137_local/Library/Application Support/Übersicht/widgets/calendar.widget/index.coffee",
+		"/Users/139137_local/Downloads/6879.bib",
+		"/Users/139137_local/Library/Application Support/Übersicht/widgets/weather.widget/README.md",
+		"/Users/139137_local/Library/Application Support/Übersicht/widgets/wunderlist-tasks.widget/index.coffee",
+		"/Users/139137_local/Library/Application Support/Übersicht/widgets/weather.widget/index.coffee",
+		"/Users/139137_local/Library/Application Support/Übersicht/widgets/getting-started.coffee",
+		"/Users/139137_local/Downloads/tipsEdit.html",
+		"/Users/139137_local/Downloads/service_logs/service_log_071140885278_1.txt",
+		"/Users/139137_local/Downloads/Metric_Actuals_Final_Format.csv",
+		"/Users/139137_local/Downloads/Unblock-Issue.txt",
+		"/Users/139137_local/Desktop/touch-glofe/src/authenticated/shared/views/helpSupportAfterLogon.jade",
+		"/Users/139137_local/Google Drive/KBC/ref_links.txt",
+		"/Users/139137_local/Google Drive/KBC/kbc_code_sample.txt",
+		"/Users/139137_local/Dropbox/Documents/misc/castro_subscriptions.opml",
+		"/Users/139137_local/Downloads/anand_katti.pub",
+		"/Users/139137_local/Downloads/Executables/Others/anand_katti",
+		"/Users/139137_local/Downloads/Executables/Others/Adarsh_New.pub",
+		"/Users/139137_local/Downloads/Executables/Others/Adarsh.pub-1",
+		"/Users/139137_local/Developer/scripts/user_add.sh",
+		"/Users/139137_local/Google Drive/Keys/Users/kaushik_chakraborty.pub",
+		"/Users/139137_local/Google Drive/Keys/Users/abhijeet_sane.pub",
+		"/Users/139137_local/Google Drive/Keys/Users/Bhakti_Public",
+		"/Users/139137_local/Google Drive/Keys/Users/Anand_Kumar_Public",
+		"/Users/139137_local/Downloads/anand_katti",
+		"/Users/139137_local/Desktop/cigna_rules_dump.json",
+		"/Users/139137_local/Downloads/vm_copy.txt",
+		"/Users/139137_local/Downloads/quest_act.log",
+		"/Users/139137_local/Downloads/sample_act.json",
+		"/Users/139137_local/Downloads/sample_quest_act.json",
+		"/Users/139137_local/Developer/src/projects/SMS_Tide/tiapp.xml",
+		"/Users/139137_local/Downloads/app 2/logs/report.csv-2014-02-18-AM.out",
+		"/Users/139137_local/Downloads/launcher.bat",
+		"/Users/139137_local/Downloads/app/logs/report.csv",
+		"/Users/139137_local/Downloads/app 2/logs/report.csv",
+		"/Users/139137_local/Downloads/app 3/logs/report.csv-2014-02-18-AM.out",
+		"/Users/139137_local/Downloads/Executables/Others/Work_Items_cec_lite_refactoring",
+		"/Users/139137_local/Downloads/app 3/logs/report.csv",
+		"/Users/139137_local/Google Drive/Gamification/technical/tech_support_user_stories_suggestion.md",
+		"/Users/139137_local/Google Drive/Gamification/technical/Components for native apps.md",
+		"/Users/139137_local/Developer/src/Polymer/polymer_test.html",
+		"/Users/139137_local/Downloads/openvpn/ca.crt",
+		"/Users/139137_local/Desktop/trans.data",
+		"/Users/139137_local/Desktop/dumb_promo.json",
+		"/Users/139137_local/Desktop/all_promo.json",
+		"/Users/139137_local/Downloads/ui/index",
+		"/Users/139137_local/Desktop/merch_info",
+		"/Users/139137_local/Desktop/steps.txt",
+		"/Users/139137_local/Downloads/hakimel-reveal.js-9cf7de5/index.html",
+		"/Users/139137_local/Desktop/access.log",
+		"/Users/139137_local/Downloads/offers-1.json",
+		"/Users/139137_local/Developer/src/projects/Server Configs/scripts/db_dump_s3.sh",
+		"/Users/139137_local/Developer/src/projects/Server Configs/fail2ban/jail.local",
+		"/Users/139137_local/Downloads/index.jsp",
+		"/Users/139137_local/Developer/src/projects/Server Configs/scripts/mysql_dump_s3.sh",
+		"/Users/139137_local/Developer/src/projects/Gamification_Platform/DB/platform_ddl_mod.sql"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"spell_check",
+			"spell",
+			"PPF",
+			"primeFactors",
+			"Kaushik,Toll,20 ",
+			"proxy",
+			"(Kaushik|Lucky),.*,.* ",
+			"Kaushik,Toll,20 ",
+			"(Kaushik|Lucky),.*,.* ",
+			"Kaushik",
+			"(Kaushik|Lucky),.*,.* ",
+			"Kaushik,Toll,20 ",
+			",",
+			", ",
+			"couples make babies?",
+			"ruleClauseCondObjectPropType",
+			"post:[[{\"activity",
+			"savePoints",
+			"post:[[{\"activity\":{\"actor\"",
+			"Dispatching post activity ",
+			"savePointsForUserInADay",
+			"Shutdown",
+			"\\\"",
+			"'",
+			"\"",
+			"wildcraft",
+			"^(.*?),(.*?),(.*?)$",
+			",$",
+			"^(.*?),(.*?),(.*?),",
+			"^(.*),(.*),(.*),(.*),(.*)$",
+			"^.*$",
+			"\\}$",
+			"^(.*):\\s\\{",
+			"\\}$",
+			"^(.*):\\s\\{",
+			"^(\".*\\}),$",
+			"^(\".*\\},)$",
+			"^\".*\\},$",
+			"amazon",
+			"\\}$",
+			"^\\{",
+			": :",
+			",(.+?)$",
+			"\\{\\s(.+?),",
+			"\\{(.+?),",
+			":(.+?),",
+			"(.+?),",
+			"{ (.+?),",
+			"^(.+?),",
+			"^{(.+?):",
+			":(.+?),",
+			"^(.+?),",
+			"^.*,"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			",",
+			"taking care of parents ?",
+			"taking care of parents",
+			"\"",
+			"\\\"",
+			"'",
+			"\"$1\" : {\"cat\" : \"$3\", \"sub_cat\" : \"$2\"},",
+			"{\"merchant\": \"$1\",\"merchant_cat\": \"$3\",\"merchant_sub_cat\": \"$2\",\"trans_value\":\"$4\",\"trans_time\":\"$5\"},",
+			"",
+			"\"merchant\": $1,",
+			"",
+			"\"merchant\": $1,",
+			"\"merchant\": \"$1\",",
+			"{$1},",
+			"{$1}",
+			"},",
+			"",
+			":",
+			", \"image\": \"$1\"}",
+			": { \"text\" : \"$1\",",
+			"{\"$1\" : { ",
+			":\"text\": \"$1\",",
+			"{$1:"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 105.0
+	},
+	"output.haskell_sublime_load":
+	{
+		"height": 100.0
+	},
+	"project": "mit_proj.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 167.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
