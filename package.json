@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "accel-mma84": "^0.2.3",
-    "tessel": "^0.3.19"
+    "gm": "^1.17.0",
+    "tessel": "^0.3.19",
+    "tessel-gpio-button": "^1.1.0"
   }
 }

@@ -2,6 +2,8 @@ exports.register = function(server, options, next) {
     console.log("socket io plugin");
     var tessel = require('tessel');
     var socket = require('socket.io').listen(server.listener);
+    var fs = require('fs');
+    var gm = require('gm')
     var script = require.resolve('../../device/index.js');
     var opts = {
         // Stop existing script, if any
@@ -51,12 +53,49 @@ exports.register = function(server, options, next) {
 
     socket.on("connection", function(socket) {
         socket.on("ping", function(data) {
-            console.log(data);
             socket.emit("pong", {
                 message: "pong"
             });
         });
+
+        socket.on("sc", function(data) {
+            var regex = /^data:.+\/(.+);base64,(.*)$/;
+
+            var matches = data.data.match(regex);
+            var ext = matches[1];
+            var data1 = matches[2];
+            var buffer = new Buffer(data1, 'base64');
+            fs.writeFileSync('data.' + ext, buffer);
+
+            gm('/Users/139137_local/projects/mit_proj/data.png').options({imageMagick: true}).crop(1213,322,0,480).resize(520,210).write('/Users/139137_local/projects/mit_proj/assets/images/cropData.png',function(err){
+            	console.log(err);
+            });
+
+            gm.compare('/Users/139137_local/projects/mit_proj/assets/images/cropData.png','/Users/139137_local/projects/mit_proj/assets/images/sample.png',function(err,isEqual,equality){
+            	console.log(equality);
+            	console.log(equality*100);
+
+            	// if ((equality*100) > 50 & (equality*100) <= 51.5){
+            	// 	console.log((equality*100) > 50 & (equality*100) <= 51.5);
+            	// 	socket.emit("win",{
+            	// 		status: 1
+            	// 	});
+            	// }
+
+            });
+            
+            // gm('/Users/139137_local/projects/mit_proj/sample.png').resize(240,240).noProfile().write('/Users/139137_local/projects/mit_proj/resizeSample.png',function(err){
+            // 	console.log(err);
+            // });
+
+        	socket.emit("sc-succ",{
+        		status : 1
+        	});
+
+        });
     });
+
+
     next();
 };
 

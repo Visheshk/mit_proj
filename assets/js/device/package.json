@@ -8,6 +8,7 @@
   "author": "Kaushik",
   "license": "Public Domain",
   "dependencies": {
-    "accel-mma84": "^0.2.3"
+    "accel-mma84": "^0.2.3",
+    "tessel-gpio-button": "^1.1.0"
   }
 }

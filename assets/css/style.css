@@ -1,8 +1,39 @@
 body
 {
 	margin: 0;
+	padding: 0;
 };
 canvas{
 	width: 100%;
 	height: 100%;
+}
+
+.imageWrapper{
+	/*position: relative;*/
+}
+.sampleSC
+{
+	float:left;
+	width: 40%;
+}
+
+.submittedSC
+{
+	float:right;
+	width: 40%;
+}
+
+.invisible{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+.absoluteWrapper {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	/*border: 1px solid red;*/
 }

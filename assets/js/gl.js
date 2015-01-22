@@ -1,5 +1,7 @@
-var x_from_tessel = 0.01;
-var y_from_tessel = 0.01;
+var x_from_tessel_A = 0.01;
+var y_from_tessel_A = 0.01;
+var x_from_tessel_B = 0.01;
+var y_from_tessel_B = 0.01;
 var prev_x = 0.01
 var prev_y = 0.01
 console.log("here");
@@ -7,14 +9,49 @@ console.log("here");
 var socket = io('http://localhost:8000');
 socket.on('t_data', function(data) {
     //console.log(data.message.x);
-    if (data.message.x !== undefined) {
-        x_from_tessel = data.message.x;
-    }
-    if (data.message.y !== undefined) {
-        y_from_tessel = data.message.y;
+
+    if (data.message.port === "gpio"){
+    	if (data.message.event === "release"){
+    		saveScreenShot();
+    	}
     }
 
+    if (data.message.port === "A") {
+        if (data.message.x !== undefined) {
+            x_from_tessel_A = data.message.x;
+        }
+        if (data.message.y !== undefined) {
+            y_from_tessel_A = data.message.y;
+        }
+    }
+
+    if (data.message.port === "B") {
+        if (data.message.x !== undefined) {
+            x_from_tessel_B = data.message.x;
+        }
+        if (data.message.y !== undefined) {
+            y_from_tessel_B = data.message.y;
+        }
+    }
+
+
     //socket.emit('ping', { my: 'hello from client' });
+});
+
+socket.on("sc-succ", function(data) {
+
+    if (data.status === 1) {
+
+        document.getElementById("submittedSC").src = "assets/images/cropData.png?g="+Date.now();
+        document.getElementById("submittedSC").className = document.getElementById("submittedSC").className + " show";
+    }
+
+});
+
+socket.on("win", function(data){
+	if (data.status === 1){
+		window.message = "asd";
+	}
 });
 socket.emit('ping', {
     my: 'hello from client'
@@ -28,7 +65,8 @@ var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.0001, 100000);
 
 var renderer = new THREE.WebGLRenderer({
-    antialias: true
+    antialias: true,
+    preserveDrawingBuffer: true
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMapEnabled = true
@@ -53,7 +91,7 @@ spotLight.shadowMapHeight = 1024;
 spotLight.shadowCameraNear = 0.1;
 spotLight.castShadow = true;
 spotLight.shadowDarkness = 0.5;
-spotLight.shadowCameraVisible	= true;
+// spotLight.shadowCameraVisible = true;
 scene.add(spotLight);
 
 onRenderFcts.push(function() {
@@ -137,31 +175,38 @@ var render = function() {
     // cube.rotation.x += 0.01;
     // cube.rotation.y += 0.01;
 
-    if (x_from_tessel !== prev_x) {
-        cube.rotation.x += x_from_tessel / 2;
-        prev_x = x_from_tessel;
+    if (x_from_tessel_A !== prev_x) {
+        cube.rotation.x += x_from_tessel_A / 2;
+        prev_x = x_from_tessel_A;
     }
 
 
-    if (y_from_tessel !== prev_y) {
-        cube.rotation.y += y_from_tessel / 2;
-        prev_y = y_from_tessel;
+    if (y_from_tessel_A !== prev_y) {
+        cube.rotation.y += y_from_tessel_A / 2;
+        prev_y = y_from_tessel_A;
     }
 
     //var angle	= Date.now()/1000 * Math.PI;
- //    var angleX = prev_x/1000 * Math.PI;
- //    var angleY = prev_y/1000 * Math.PI;
-    
- //    // if (angleX * 10000 * -1 <= 1.0){
- //    	console.log(angleX * 10000 * -1);
- //    	spotLight.position.x	+= Math.cos(angleX*-0.1)*20;	
- //    // }
-	// // if (angleY * 10000 <= 1.0){
-	// 	console.log(angleY * 10000);
- //    	spotLight.position.y	+= 10 + Math.sin(angleY*0.5)*6;
-    // }	
-	
-	//spotLight.position.z	= Math.sin(angle*-0.1)*20;		
+    // console.log("B",x_from_tessel_B);
+    // console.log("A",x_from_tessel_A);
+    var prev_x_B = 0.01;
+    if (x_from_tessel_B !== prev_x_B) {
+        spotLight.position.x = x_from_tessel_B * Math.PI + spotLight.position.x;
+        prev_x_B = x_from_tessel_B;
+    }
+
+    //    var angleY = y_from_tessel_B/1000 * Math.PI;
+
+    //    // if (angleX * 10000 * -1 <= 1.0){
+    //    	//console.log(angleX * 10000 * -1);
+    //    	spotLight.position.x	+= Math.cos(angleX*-0.1)*20;	
+    //    // }
+    // // if (angleY * 10000 <= 1.0){
+    // 	// console.log(angleY * 10000);
+    //    	spotLight.position.y	+= 10 + Math.sin(angleY*0.5)*6;
+    //}	
+
+    //spotLight.position.z	= Math.sin(angle*-0.1)*20;		
 
 
     lastTimeMsec = lastTimeMsec || nowMsec - 1000 / 60
@@ -175,8 +220,24 @@ var render = function() {
 
     camera.lookAt(scene.position)
 
-
     renderer.render(scene, camera);
 };
+
+var saveScreenShot = function() {
+    var dataURL = THREEx.Screenshot.toDataURL(renderer);
+    console.log(dataURL);
+    // if (width === undefined && height === undefined) {
+    // post to node
+    socket.emit('sc', {
+        data: dataURL
+    });
+    // } else {
+    //     // resize it and notify the callback
+    //     // * resize == async so if callback is a window open, it triggers the pop blocker
+    //     _aspectResize(dataUrl, width, height, callback);
+    // }
+}
+
+
 
 render();
