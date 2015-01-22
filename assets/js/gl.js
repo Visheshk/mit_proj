@@ -53,7 +53,7 @@ spotLight.shadowMapHeight = 1024;
 spotLight.shadowCameraNear = 0.1;
 spotLight.castShadow = true;
 spotLight.shadowDarkness = 0.5;
-// spotLight.shadowCameraVisible	= true;
+spotLight.shadowCameraVisible	= true;
 scene.add(spotLight);
 
 onRenderFcts.push(function() {
@@ -134,6 +134,8 @@ var lastTimeMsec = null,
 var render = function() {
     requestAnimationFrame(render);
 
+    // cube.rotation.x += 0.01;
+    // cube.rotation.y += 0.01;
 
     if (x_from_tessel !== prev_x) {
         cube.rotation.x += x_from_tessel / 2;
@@ -145,6 +147,21 @@ var render = function() {
         cube.rotation.y += y_from_tessel / 2;
         prev_y = y_from_tessel;
     }
+
+    //var angle	= Date.now()/1000 * Math.PI;
+ //    var angleX = prev_x/1000 * Math.PI;
+ //    var angleY = prev_y/1000 * Math.PI;
+    
+ //    // if (angleX * 10000 * -1 <= 1.0){
+ //    	console.log(angleX * 10000 * -1);
+ //    	spotLight.position.x	+= Math.cos(angleX*-0.1)*20;	
+ //    // }
+	// // if (angleY * 10000 <= 1.0){
+	// 	console.log(angleY * 10000);
+ //    	spotLight.position.y	+= 10 + Math.sin(angleY*0.5)*6;
+    // }	
+	
+	//spotLight.position.z	= Math.sin(angle*-0.1)*20;		
 
 
     lastTimeMsec = lastTimeMsec || nowMsec - 1000 / 60
