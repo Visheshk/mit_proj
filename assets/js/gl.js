@@ -2,9 +2,11 @@ var x_from_tessel_A = 0.01;
 var y_from_tessel_A = 0.01;
 var x_from_tessel_B = 0.01;
 var y_from_tessel_B = 0.01;
+var z_from_tessel_B = 0.01;
 var prev_x = 0.01
 var prev_y = 0.01
-console.log("here");
+//window.message("here");
+
 
 var socket = io('http://localhost:8000');
 socket.on('t_data', function(data) {
@@ -32,6 +34,9 @@ socket.on('t_data', function(data) {
         if (data.message.y !== undefined) {
             y_from_tessel_B = data.message.y;
         }
+        if (data.message.z !== undefined) {
+            z_from_tessel_B = data.message.z;
+        }
     }
 
 
@@ -50,7 +55,8 @@ socket.on("sc-succ", function(data) {
 
 socket.on("win", function(data){
 	if (data.status === 1){
-		window.message = "asd";
+		window.alert("WELL DONE!!");
+		location.reload();
 	}
 });
 socket.emit('ping', {
@@ -189,10 +195,10 @@ var render = function() {
     //var angle	= Date.now()/1000 * Math.PI;
     // console.log("B",x_from_tessel_B);
     // console.log("A",x_from_tessel_A);
-    var prev_x_B = 0.01;
-    if (x_from_tessel_B !== prev_x_B) {
-        spotLight.position.x = x_from_tessel_B * Math.PI + spotLight.position.x;
-        prev_x_B = x_from_tessel_B;
+    var prev_z_B = 0.01;
+    if (z_from_tessel_B !== prev_z_B) {
+        spotLight.position.z = z_from_tessel_B * Math.PI + spotLight.position.z;
+        prev_z_B = z_from_tessel_B;
     }
 
     //    var angleY = y_from_tessel_B/1000 * Math.PI;

@@ -75,12 +75,12 @@ exports.register = function(server, options, next) {
             	console.log(equality);
             	console.log(equality*100);
 
-            	// if ((equality*100) > 50 & (equality*100) <= 51.5){
-            	// 	console.log((equality*100) > 50 & (equality*100) <= 51.5);
-            	// 	socket.emit("win",{
-            	// 		status: 1
-            	// 	});
-            	// }
+            	if ((equality*100) > 50 & (equality*100) <= 52){
+            		console.log((equality*100) > 50 & (equality*100) <= 52);
+            		socket.emit("win",{
+            			status: 1
+            		});
+            	}
 
             });
             
