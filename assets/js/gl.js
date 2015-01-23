@@ -5,17 +5,16 @@ var y_from_tessel_B = 0.01;
 var z_from_tessel_B = 0.01;
 var prev_x = 0.01
 var prev_y = 0.01
-//window.message("here");
 
 
 var socket = io('http://localhost:8000');
 socket.on('t_data', function(data) {
     //console.log(data.message.x);
 
-    if (data.message.port === "gpio"){
-    	if (data.message.event === "release"){
-    		saveScreenShot();
-    	}
+    if (data.message.port === "gpio") {
+        if (data.message.event === "release") {
+            saveScreenShot();
+        }
     }
 
     if (data.message.port === "A") {
@@ -47,17 +46,18 @@ socket.on("sc-succ", function(data) {
 
     if (data.status === 1) {
 
-        document.getElementById("submittedSC").src = "assets/images/cropData.png?g="+Date.now();
+        document.getElementById("submittedSC").src = "assets/images/cropData.png?g=" + Date.now();
         document.getElementById("submittedSC").className = document.getElementById("submittedSC").className + " show";
     }
 
 });
 
-socket.on("win", function(data){
-	if (data.status === 1){
-		window.alert("WELL DONE!!");
-		location.reload();
-	}
+socket.on("win", function(data) {
+    if (data.status === 1) {
+        bootbox.alert("WELL DONE!!", function(e) {
+            location.reload();
+        });
+    }
 });
 socket.emit('ping', {
     my: 'hello from client'

@@ -28,10 +28,6 @@ server.route({
     }
 });
 
-// server.start(function () {
-//     console.log("socket.io example @", server.info.uri)
-// });
-
 server.register([{
     register: Good,
     options: {
@@ -47,7 +43,7 @@ server.register([{
     register: require('./assets/js/plugins/socketio')
 }], function(err) {
     if (err) {
-        throw err; // something bad happened loading the plugin
+        //throw err; // something bad happened loading the plugin
     }
 
     server.start(function() {

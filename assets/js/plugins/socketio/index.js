@@ -14,7 +14,7 @@ exports.register = function(server, options, next) {
     var args = [];
 
     tessel.findTessel(opts, function(err, device) {
-        if (err) throw err;
+        if (err) return;
 
         device.run(script, args, {}, function() {
 
